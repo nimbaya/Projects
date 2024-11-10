@@ -1,71 +1,96 @@
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        text-decoration: dotted;
-    }
+@font-face {
+  font-family: "GeomanistUltra";
+  src: url(./fonts/GeomanistUltra.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
 
-    body{
-        background: #181818;
-        color: #fefefe;
-        font-family: "Lilita One", Helvetica, Arial, sans-serif;
-        font-weight: 300;
-        line-height: 1.1;
-        font-size: 16px;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: dotted;
+}
 
-    a{
-        color: unset;
-    }
+body {
+  background: #181818;
+  color: #fefefe;
+  font-family: "GeomanistUltra", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 16px;
+}
 
-    .container{
-        padding-left: 6vw;
-        padding-right: 6vw;
-    }
+a {
+  color: unset;
+}
 
-    .top-header{
-        position: fixed;
-        top: 6vw;
-        left: 0;
-        height: 0;
-        width: 100%;
-        z-index: 10;
-    }
+.top-header {
+  position: fixed;
+  top: 6vw;
+  left: 0;
+  height: 0;
+  width: 100%;
+  z-index: 10;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
 
-    .header-wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-transform: uppercase;
-    }
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
 
-    .style__logo{
-        font-size: 40px;
-    }
+.style__logo {
+  font-size: 40px;
+}
 
-    .style__nav-inner{
-        font-size: 20px;
-    }
+.style__nav-inner {
+  font-size: 26px;
+}
 
-    .nav__list{
-        display: flex;
-    }
+.nav__list {
+  display: flex;
+}
 
-    .nav__style__list{
-        padding: 20px 15px;
-    }
+.nav__style__list {
+  padding: 20px 15px;
+}
 
-    .main-wrapper{
-        margin-top: 24vh;
-    }
+.main-wrapper {
+  margin-top: 32vh;
+}
 
-    .main-contaner{
-        max-width: 1400px;
-        margin: 0 auto;
-    }
+.main-contaner {
+  padding-left: 12vw;
+  padding-right: 12vw;
+}
 
-    .main-picture{
-        text-align: center;
-          
-    }
+.main-picture {
+  text-align: center;
+}
+
+.picture-me {
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main-text {
+  margin-top: 3.2em;
+  font-size: calc(10px + 15 * ((100vw - 420px) / 1180));
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.main-text p {
+  font-size: 2em;
+}
+
+.main-text strong {
+  color: #b3a577;
+  font-weight: bolder;
+}
