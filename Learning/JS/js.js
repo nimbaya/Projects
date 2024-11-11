@@ -1,4 +1,6 @@
-let map = new Map();
-map.set(["key", "value"],["1", "2"]);
-let set = new Set([1,2,3]);
-console.log(set)
+const people = new Map();
+people.set("alice",
+     {age:30,work:"programmer", obj:{project: 2}});
+        people.forEach((value, key) => {
+            console.log(`${key}`,  value.obj);
+        });
