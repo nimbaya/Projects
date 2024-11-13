@@ -115,11 +115,53 @@ const funcObjBook = function () {
       year: 1869,
     },
   ];
-  books.forEach((book)=>{
-
-  console.log(
-    `Название: ${book.name}, Автор: ${book.author}, Год: ${book.year}`)
+  books.forEach((book) => {
+    console.log(
+      `Название: ${book.name}, Автор: ${book.author}, Год: ${book.year}`
+    );
   });
+};
+
+/* 
+6. Задача на строковые методы
+*/
+
+const funcPalindrom = function (str) {
+  let mas = str.toLowerCase().split("");
+  let string = mas.reverse().join("");
+  if (str.toLowerCase() === string) {
+    console.log(`Строка ${str} является полиндромом`);
+  } else {
+    console.log(`Строка ${str} не является полиндромом`);
+  }
+};
+
+/* 
+7. Задача на использование Map
+*/
+
+const funcMap = function () {
+  const map = new Map();
+  map.set("Alice", 25);
+  map.set("Bob", 30);
+  map.set("Jim", 18);
+  if (map.has("Alice")) {
+    map.delete("Bob");
+  }
+  map.forEach((value, key) => {
+    console.log(`Список людей: ${key} => ${value} лет`);
+  });
+};
+
+/* 
+8. Задача на использование Set
+*/
+
+const funcSet = function () {
+  const set = new Set([1,2,3,3,2,4,5,6]);
+  set.forEach((value)=>{
+    console.log(value);
+  })
 };
 
 functionNameAndAge("Никита", "35");
@@ -127,3 +169,6 @@ funcForAndWhile("for");
 funcArifmNumbers(5, 3);
 funcArrayNumbers(5, 100);
 funcObjBook();
+funcPalindrom("казак");
+funcMap();
+funcSet();
