@@ -49,8 +49,59 @@ const funcAddAndDeleteArray = function () {
   console.log(array);
 };
 
+/*
+6. Чётные числа
+*/
+
+const funcCheatNumbers = function () {
+  array.forEach((element) => {
+    if (element % 2 === 0) {
+      console.log(element);
+    }
+  });
+};
+
+/*
+7. Удвоение значений
+*/
+
+const funcNewArrayDouble = function () {
+  let array = [1, 2, 3, 4, 5];
+  let newArray = array.map((element) => element * 2);
+  console.log(newArray);
+};
+
+/*
+8. Сумма элементов
+*/
+
+const funcSumElements = function () {
+  console.log(array.reduce((acc, element) => acc + element, 0));
+};
+
+/*
+9. Подсчёт слов
+*/
+
+const funcAccString = function () {
+  let array = ["apple", "banana", "apple", "orange", "banana", "apple"];
+  const map = new Map();
+  array.forEach((element) => {
+    if (map.has(element)) {
+      map.set(element, map.get(element) + 1);
+    } else {
+      map.set(element, 1);
+    }
+  });
+  console.log(map);
+};
+
 funcCreateArray();
 funcChangeArray();
 funcLengthArray((array = [1, 2, 3]));
 funcElementSize();
 funcAddAndDeleteArray();
+funcCheatNumbers((array = [1, 2, 3, 4, 5, 6]));
+funcNewArrayDouble();
+funcSumElements((array = [1, 2, 3, 4, 5]));
+funcAccString();
