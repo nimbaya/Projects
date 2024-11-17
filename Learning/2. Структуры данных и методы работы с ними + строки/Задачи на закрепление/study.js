@@ -96,6 +96,70 @@ const funcAccString = function () {
   console.log(map);
 };
 
+/*
+10. Поиск максимального значения
+*/
+
+const funcMaxNumbersArray = function (array) {
+  let max = Math.max(...array);
+  console.log(max);
+};
+
+/*
+11. Поиск элемента
+*/
+
+const funcSearchElem = function () {
+  let array = [1, 2, 3, 4, 5];
+  let value = array.findIndex((num) => num === 3);
+  console.log(array[value]);
+};
+
+/*
+12. Нахождение первого отрицательного числа
+*/
+
+const funcArrayElementSearch = function () {
+  let array = [1, 2, -3, 4, -5];
+  let result = array.find((element) => element < 0);
+  console.log(result);
+};
+
+/*
+12. Сортировка по возрастанию
+*/
+
+const funcSortArrayNum = function () {
+  let array = [1, 10, 3, 2, 15];
+  array.sort((a, b) => a - b);
+  console.log(array);
+};
+
+/*
+12. Сортировка строк
+*/
+
+const funcSortArrayStr = function () {
+  let array = ["banana", "apple", "cherry", "date"];
+  array.sort((a, b) => a.localeCompare(b));
+  console.log(array);
+};
+
+/*
+13. Удаление дубликатов
+*/
+
+const funcDeleteDubleArray = function () {
+  let array = [1, 2, 2, 3, 4, 4, 5, 5, 5];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === array[i + 1]) {
+      array.splice(i + 1, 1);
+      i--;
+    }
+  }
+  console.log(array);
+};
+
 funcCreateArray();
 funcChangeArray();
 funcLengthArray((array = [1, 2, 3]));
@@ -105,3 +169,9 @@ funcCheatNumbers((array = [1, 2, 3, 4, 5, 6]));
 funcNewArrayDouble();
 funcSumElements((array = [1, 2, 3, 4, 5]));
 funcAccString();
+funcMaxNumbersArray((array = [1, 2, 32, 4, 5]));
+funcSearchElem();
+funcArrayElementSearch();
+funcSortArrayNum();
+funcSortArrayStr();
+funcDeleteDubleArray();
